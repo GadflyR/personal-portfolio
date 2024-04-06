@@ -239,26 +239,6 @@ body,html {
         padding:10px 11px;
     }
 }
-#footer {
-    width:100%;
-    padding:10vh 0px;
-    text-align:center;
-    font-weight:bold;
-}
-#footer a {
-    font-size:18px;
-    background-image: linear-gradient(to left, #FF416C 0%, #FF4B2B 100%);
-    -webkit-background-clip:text;
-    background-clip:text;
-    -webkit-text-fill-color: transparent;
-    background-size:500% 500% !important;
-    -webkit-animation: Gradient 20s ease infinite;
-    -moz-animation: Gradient 20s ease infinite;
-    -o-animation: Gradient 20s ease infinite;
-    animation: Gradient 20s ease infinite;
-    font-family: 'Comfortaa', cursive;
-    text-decoration:none;
-}
 button:focus {
     outline:none;
 }
