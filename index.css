@@ -80,7 +80,6 @@ body,html {
     display:flex;
     justify-content:center;
     flex-direction:column;
-    /* transition:1s ease-in-out; */
     padding-top:20vh;
 }
 #tagline {
