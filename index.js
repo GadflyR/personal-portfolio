@@ -18,7 +18,7 @@ async function postMessage() {
   const messageContent = document.getElementById('messageContent').value;
 
   // 使用fetch API发送数据到后端
-  const response = await fetch('/message', {
+  const response = await fetch('http://localhost:5000/message', {
       method: 'POST',
       headers: {
           'Content-Type': 'application/json',
