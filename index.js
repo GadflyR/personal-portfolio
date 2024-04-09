@@ -1,13 +1,3 @@
-var width = $(window).width(); 
-
-setTimeout(function(){
-    $("#loading").addClass("animated fadeOut");
-    setTimeout(function(){
-      $("#loading").removeClass("animated fadeOut");
-      $("#loading").css("display","none");
-    },800);
-},1450);
-
 async function postMessage() {
   // 阻止表单的默认提交行为
   event.preventDefault();
