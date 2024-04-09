@@ -62,6 +62,12 @@ body,html {
     font-size:80px;
     width:60%;
 }
+#aboutme, #contactme{
+    padding-top:10vh;
+    padding-bottom: 5vh;
+    font-size:70px;
+    width:60%;
+}
 #portfolio {
     width:80%;
     padding:2% 10%;
