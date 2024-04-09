@@ -1,5 +1,4 @@
 async function postMessage() {
-  // 阻止表单的默认提交行为
   event.preventDefault();
 
   // 获取用户输入的数据
