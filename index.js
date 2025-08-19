@@ -104,14 +104,14 @@ async function postMessage(e) {
       },
       {
         slug: "small-lights",
-  title: "Small Lights",
+  title: "Days in a teen mental-rehab center",
   date: "August 19, 2025",
   minutes: 7,
   tags: ["field notes", "mental health", "education"],
   excerpt:
     "Field notes from a summer in an adolescent mental-health center: progress measured in eyelashes, breaths, and the one word spoken at the right time.",
   content: `
-    <p>I spent the summer of 2025 interning at an adolescent mental-health rehabilitation center in Beijing. Nothing in the lobby prepared me for how slowly time would move there, or how carefully you learn to measure progress: not by milestones, but by breaths, by eyelash flickers, by a single word spoken at the right moment. These are field notes from days that looked ordinary until you paid attention.</p>
+    <p><i>Summer 2025 was overbooked, but I kept returning to the adolescent mental rehabilitation center in Beijing where I’d interned before. What follows isn’t diagnosis or argument, just field notes: the texture of days measured in tiny steps, the kind that never make headlines and still matter.</i></p>
 
     <p>Some children look no different at first glance. Only when they speak does it feel as if someone pressed slow motion. Their eyes hover in midair for a long while before finding a landing spot. When they pass an object, their fingers curl and uncurl several times in the air before they can hold it steady.</p>
 
