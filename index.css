@@ -138,7 +138,7 @@ body, html {
 #portfolio div h1 {
     font-family: 'ATypewriterForMe';
 }
-#poetry, #music, #code, #contact {
+#poetry, #music, #questioning-equity, #contact {
     margin:4vh 0px !important;
     padding:2vh 0px !important;
 }
@@ -285,4 +285,70 @@ button:focus {
 }
 ::-webkit-scrollbar-thumb:hover {
     background: #555; 
+}
+/* ===== Questioning Equity Blog ===== */
+.hidden { display: none !important; }
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-top: 16px;
+}
+
+.blog-card {
+  background: #fff;
+  border: 2px solid #000;
+  border-radius: 20px;
+  padding: 18px 18px 16px;
+  transition: transform .2s ease, box-shadow .2s ease;
+  cursor: pointer;
+}
+.blog-card:hover { transform: translateY(-3px); box-shadow: 0 8px 0 #000; }
+.blog-card h3 { margin: 0 0 8px; font-size: 22px; font-family: 'ATypewriterForMe'; color: #000; }
+.blog-card .meta { font-size: 14px; color: #444; margin-bottom: 10px; }
+.blog-card p { margin: 0; line-height: 1.5; color: #222; }
+
+.blog-view {
+  margin-top: 28px;
+  background: #fff;
+  border: 2px solid #000;
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow: 0 10px 0 #000;
+}
+.blog-view .back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.blog-view .back.btn_one { margin: 0 0 10px 0; }
+.blog-view h1 {
+  font-family: 'ATypewriterForMe';
+  font-size: 36px;
+  background: none;
+  -webkit-text-fill-color: initial;
+  color: #000;
+  margin: 6px 0 6px;
+}
+.blog-view .meta {
+  color: #666; font-size: 14px; margin-bottom: 20px;
+}
+.blog-body {
+  font-size: 18px; line-height: 1.8; color: #111;
+}
+.blog-body h2, .blog-body h3 {
+  font-family: 'ATypewriterForMe'; color: #111; margin-top: 24px;
+}
+.blog-tags { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 8px; }
+.blog-tag {
+  border: 2px solid #000; border-radius: 999px; padding: 4px 10px; font-size: 12px;
+  background: #f7f5e7; color: #000;
+}
+
+@media (max-width: 900px) {
+  .blog-view { padding: 18px; }
+  .blog-view h1 { font-size: 28px; }
+  .blog-body { font-size: 16px; }
 }
