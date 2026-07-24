@@ -2,109 +2,187 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="letter-s.png" />
     <title>Shaoheng Ren</title>
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div id="header">
-        <nav class="nav-left">
-          <a href="#questioning-equity">Questioning Equity</a>
-          <a href="#ai-robot">AI Robot</a>
-          <a href="#poetry">Poetry</a>
-          <a href="#music">Music</a>
-        </nav>
-      
-        <div id="title">Shaoheng Ren</div>
-      
-        <nav class="nav-right">
-          <a href="#aboutme">about</a>
-          <a href="#contact">contact</a>
-          <a href="https://blog.shaohengren.com/">blog</a>
-        </nav>
-      </div>      
+    <div id="scroll-progress"></div>
 
-    <center>
-    <div id="middle">
-        <div id="tagline">
-            Hey there! <br>
-            This is Sean.
-        </div>         
+    <div id="header">
+        <a id="title" href="#top">SR<span class="star">★</span></a>
+        <nav class="nav-main">
+          <a href="#questioning-equity">equity</a>
+          <a href="#ai-robot">robot</a>
+          <a href="#poetry">poetry</a>
+          <a href="#music">music</a>
+          <a href="#contact">contact</a>
+          <a href="https://blog.shaohengren.com/" class="nav-ext">blog ↗</a>
+        </nav>
+      </div>
+
+    <section id="middle">
+        <div class="hero-wrap">
+            <div class="hero-left">
+                <div class="hero-kicker">✂ - - - a homemade corner of the internet - - -</div>
+                <h1 class="hero-name">
+                    <span class="line-fill">SHAOHENG</span><br>
+                    <span class="line-outline">REN</span>
+                </h1>
+                <div class="hero-roles">
+                    <span class="roles-label">currently:</span>
+                    <span class="typed-wrap"><span id="typed-text"></span><span class="caret"></span></span>
+                </div>
+                <div class="hero-cta">
+                    <a class="btn_primary" href="#aboutme">dig in ↓</a>
+                    <a class="btn_one" href="https://blog.shaohengren.com/">the blog ↗</a>
+                </div>
+            </div>
+
+            <figure class="polaroid reveal">
+                <img src="background.jpeg" alt="pixel-art night desk with a city outside the window">
+                <figcaption>2023 — first year in the US. started our AI project
+                in sight of the Empire State Building.</figcaption>
+                <span class="tape tape-left"></span>
+                <span class="tape tape-right"></span>
+            </figure>
+        </div>
+
+        <span class="sticker sticker-1">est. 2007</span>
+        <span class="sticker sticker-2">ROCK'N'ROLL ♪</span>
+        <span class="sticker sticker-3">ask better questions!</span>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+            <span>POET</span><b>★</b><span>AI ROBOT BUILDER</span><b>★</b><span>GAME DEV</span><b>★</b><span>ROCK FAN</span><b>★</b>
+            <span>POET</span><b>★</b><span>AI ROBOT BUILDER</span><b>★</b><span>GAME DEV</span><b>★</b><span>ROCK FAN</span><b>★</b>
+        </div>
     </div>
-    <div id="image-caption">
-        2023 was my first year in the US, started our AI project when having a sight of the Empire State Building.
-    </div>
-    </center>
 
     <div id="portfolio">
-        <div id="aboutme">About Me</div>
-        <div id="questioning-equity">
-            <h1>Questioning Equity.</h1>
+        <div id="aboutme" class="section-title reveal">
+            <span class="handwritten">about me… it's all below ↓</span>
+        </div>
+
+        <section id="questioning-equity" class="reveal">
+            <div class="sec-head">
+                <span class="sec-num">no.01</span>
+                <h1>QUESTIONING EQUITY</h1>
+            </div>
+            <p class="sec-lede">essays &amp; field notes.</p>
             <div id="qe-blog-list" class="blog-grid"></div>
             <section id="qe-blog-view" class="blog-view hidden" aria-live="polite"></section>
-        </div>
-        <div id="ai-robot">
-        <h1>AI Robot.</h1>
-        <button class="btn_one" onclick="window.location='https://ibot1.net/';">Visit iBot</button>
-        <h2>My Other Coding Projects</h2>
-        <div class="project">
-            <h2>Github</h2>
-            <div>Currently in the early stages of my coding career. Particularly interested in python, deep learning and game design.</div>
-            <button class="btn_one" onclick="window.location='https://github.com/GadflyR';">Visit Github</button>
-        </div>
-        <div class="project">
-            <h2>Urban Assault</h2>
-            <div>A 2D topdown tac shooter game. Try Speedrun. </div>
-            <button class="btn_one" onclick="window.location='https://machupichu1021.itch.io/urban-assault';">Play Online (itch.io)</button>
-            <button class="btn_one" onclick="window.location='https://github.com/GadflyR/UrbanAssault';">Code</button>
-        </div>
-        <div class="project">
-            <h2>Rang in Korea: Cartoon Korean</h2>
-            <div>A colloquial Korean learning app developed with my friends.</div>
-            <button class="btn_one" onclick="window.location='https://play.google.com/store/apps/details?id=com.junkwon.korean';">Install from Google Play</button>
-        </div>
-        <div id="poetry">
-            <h1>Poetry.</h1>
-            <div>
-                <button class="btn_one" onclick="window.location='poems';">View My Poems</button>
-            </div>
-            <h2>My Books</h2>
-            <div>
-                Two collections of poetry and a fairy tale I published.<br>
-                <button class="btn_one" onclick="window.location='books';">View My Books</button>
-            </div>
-        </div>
-        <div id="music">
-            <h1>Music.</h1>
-            <div>
-                A firm fan of rock music. I have a particular affinity for classic rock, hard rock, alternative, and progressive rock.
-                The Beatles, Led Zeppelin, King Crimson, Guns N' Roses, and Oasis stand out as my all-time favorites.
-            </div>
-        </div>
-        
-        <a href="https://blog.shaohengren.com/">
-            <button class="btn_two">View My Gallery</button>
-        </a>
+        </section>
 
-        <div id="contact">
-            <div id="contactme">Contact Me</div> 
-            <form>
-                <input type="text" id="name" placeholder="name" required>
-                <input type="email" id="email" placeholder="email" required><br>
-                <textarea placeholder="your message" id="messageContent" required rows="5"></textarea><br>
-                <button class="btn_one" onclick="postMessage()">send</button>
-            </form> 
-            <div id="details">
-            <a class="btn_social" href="tel:+1 3322761349"><i class="fas fa-phone"></i></a>
-            <a class="btn_social" href="mailto:ottomanhabsburg@gmail.com"><i class="fas fa-at"></i></a>
-            <a class="btn_social" href="https://github.com/GadflyR"><i class="fab fa-github"></i></a>
-            <a class="btn_social" href="https://www.linkedin.com/in/shaoheng-ren-620a0a28a/"><i class="fab fa-linkedin"></i></a>
-            <a class="btn_social" href="https://www.instagram.com/gadfly54/"><i class="fab fa-instagram"></i></a>
-            </div>   
+        <section id="ai-robot" class="reveal">
+            <div class="sec-head">
+                <span class="sec-num">no.02</span>
+                <h1>AI ROBOT</h1>
+            </div>
+            <div class="ibot-row">
+                <a class="btn_primary" href="https://ibot1.net/">visit iBot →</a>
+                <span class="scribble">← my baby!</span>
+            </div>
+            <h2 class="sub-head">+ other things I coded</h2>
+            <div class="project-grid">
+                <div class="project reveal">
+                    <span class="tape"></span>
+                    <div class="project-icon"><i class="fab fa-github"></i></div>
+                    <h2>GITHUB</h2>
+                    <p>Early stages of my coding career. Python, deep learning, game design.</p>
+                    <div class="project-links">
+                        <a class="btn_one" href="https://github.com/GadflyR">visit ↗</a>
+                    </div>
+                </div>
+                <div class="project reveal">
+                    <span class="tape"></span>
+                    <div class="project-icon"><i class="fas fa-gamepad"></i></div>
+                    <h2>URBAN ASSAULT</h2>
+                    <p>A 2D topdown tac shooter. Try Speedrun.</p>
+                    <div class="project-links">
+                        <a class="btn_one" href="https://machupichu1021.itch.io/urban-assault">play ↗</a>
+                        <a class="btn_one" href="https://github.com/GadflyR/UrbanAssault">code ↗</a>
+                    </div>
+                </div>
+                <div class="project reveal">
+                    <span class="tape"></span>
+                    <div class="project-icon"><i class="fas fa-language"></i></div>
+                    <h2>RANG IN KOREA</h2>
+                    <p>Cartoon Korean — a colloquial Korean learning app built with friends.</p>
+                    <div class="project-links">
+                        <a class="btn_one" href="https://play.google.com/store/apps/details?id=com.junkwon.korean">google play ↗</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="poetry" class="reveal">
+            <div class="sec-head">
+                <span class="sec-num">no.03</span>
+                <h1>POETRY</h1>
+            </div>
+            <p class="sec-lede">two published collections of poetry and a fairy tale.</p>
+            <div>
+                <a class="btn_primary" href="poems">read the poems</a>
+                <a class="btn_one" href="books">see the books</a>
+            </div>
+        </section>
+
+        <section id="music" class="reveal">
+            <div class="sec-head">
+                <span class="sec-num">no.04</span>
+                <h1>MUSIC</h1>
+            </div>
+            <p class="sec-lede">classic rock, hard rock, alternative, prog, indie.</p>
+        </section>
+    </div>
+
+    <div class="marquee marquee-red" aria-hidden="true">
+        <div class="marquee-track reverse">
+            <span>RADIOHEAD</span><b>♪</b><span>PINK FLOYD</span><b>♪</b><span>KING CRIMSON</span><b>♪</b><span>BC, NR</span><b>♪</b><span>GEESE</span><b>♪</b>
+            <span>RADIOHEAD</span><b>♪</b><span>PINK FLOYD</span><b>♪</b><span>KING CRIMSON</span><b>♪</b><span>BC, NR</span><b>♪</b><span>GEESE</span><b>♪</b>
         </div>
     </div>
+
+    <div id="portfolio-bottom">
+        <div class="gallery-cta reveal">
+            <span class="handwritten">psst — there are photos too</span><br>
+            <a href="https://blog.shaohengren.com/" class="btn_primary big">VIEW MY GALLERY</a>
+        </div>
+
+        <section id="contact" class="reveal">
+            <div class="sec-head">
+                <span class="sec-num">no.05</span>
+                <h1>WRITE TO ME</h1>
+            </div>
+            <p class="sec-lede">say hi</p>
+            <form>
+                <input type="text" id="name" placeholder="your name" required>
+                <input type="email" id="email" placeholder="your email" required>
+                <textarea placeholder="your message — rants, poems, band recs…" id="messageContent" required rows="5"></textarea>
+                <button class="btn_primary" type="button" onclick="postMessage(event)">SEND IT →</button>
+            </form>
+            <div id="details">
+            <a class="btn_social" href="tel:+1 3322761349" aria-label="Phone"><i class="fas fa-phone"></i></a>
+            <a class="btn_social" href="mailto:ottomanhabsburg@gmail.com" aria-label="Email"><i class="fas fa-at"></i></a>
+            <a class="btn_social" href="https://github.com/GadflyR" aria-label="Github"><i class="fab fa-github"></i></a>
+            <a class="btn_social" href="https://www.linkedin.com/in/shaoheng-ren-620a0a28a/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a class="btn_social" href="https://www.instagram.com/gadfly54/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="footer-line">
+                <span class="handwritten"> — Sean ✌</span>
+            </div>
+        </section>
+    </div>
+
+    <button id="back-to-top" aria-label="Back to top">↑</button>
+
 <script src="index.js"></script>
 </body>
 </html>

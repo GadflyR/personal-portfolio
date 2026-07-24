@@ -234,4 +234,90 @@ async function postMessage(e) {
       }
     });
   })();
-  
+
+  /* =======================================================
+     Page dynamics: typewriter hero, glassy header, scroll
+     progress, reveal-on-scroll, back-to-top.
+  ========================================================= */
+  (function () {
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    /* --- Typewriter tagline --- */
+    function typewriter() {
+      const el = document.getElementById("typed-text");
+      if (!el) return;
+      const phrases = [
+        "building an AI robot.",
+        "writing poems & fairy tales.",
+        "blasting Led Zeppelin.",
+        "asking better questions."
+      ];
+      if (reduceMotion) { el.textContent = phrases[0]; return; }
+
+      let phrase = 0, char = 0, deleting = false;
+      function tick() {
+        const current = phrases[phrase];
+        el.textContent = current.slice(0, char);
+        let delay = deleting ? 45 : 95;
+        if (!deleting && char === current.length) {
+          delay = 2200; deleting = true;
+        } else if (deleting && char === 0) {
+          deleting = false;
+          phrase = (phrase + 1) % phrases.length;
+          delay = 400;
+        } else {
+          char += deleting ? -1 : 1;
+        }
+        setTimeout(tick, delay);
+      }
+      tick();
+    }
+
+    /* --- Header + progress + back-to-top on scroll --- */
+    function onScroll() {
+      const header = document.getElementById("header");
+      const progress = document.getElementById("scroll-progress");
+      const toTop = document.getElementById("back-to-top");
+      const y = window.scrollY;
+
+      if (header) header.classList.toggle("scrolled", y > 60);
+      if (toTop) toTop.classList.toggle("show", y > window.innerHeight * 0.8);
+      if (progress) {
+        const max = document.documentElement.scrollHeight - window.innerHeight;
+        progress.style.width = (max > 0 ? (y / max) * 100 : 0) + "%";
+      }
+    }
+
+    /* --- Reveal sections as they enter the viewport --- */
+    function setupReveal() {
+      const targets = document.querySelectorAll(".reveal");
+      if (!targets.length) return;
+      if (reduceMotion || !("IntersectionObserver" in window)) {
+        targets.forEach(t => t.classList.add("visible"));
+        return;
+      }
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+      targets.forEach(t => io.observe(t));
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      typewriter();
+      setupReveal();
+      onScroll();
+      window.addEventListener("scroll", onScroll, { passive: true });
+
+      const toTop = document.getElementById("back-to-top");
+      if (toTop) {
+        toTop.addEventListener("click", () => {
+          window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
+        });
+      }
+    });
+  })();
